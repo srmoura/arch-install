@@ -62,19 +62,21 @@ arch-chroot /mnt/btrfs-current /bin/bash
 
 pacman -S btrfs-progs
 ```
-** Descomente ***
+** Descomente **
+
 ```zsh
 vim /etc/locale.gen
 locale-gen
-echo LANG=en_US.UTF-8 > /etc/locale.conf
-export LANG=en_US.UTF-8
-ln -s /usr/share/zoneinfo/Europe/Kiev /etc/localtime
+echo LANG=pt_br.UTF-8 > /etc/locale.conf
+export LANG=pt_br.UTF-8
+ln -s /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 hwclock --systohc --utc
 ```
-** Setando Hostname**
+** Setando Hostname **
+
 ```zsh
-echo 'idv-HP-EliteBook-840-G1' > /etc/hostname
-nano /etc/nsswitch
+echo 'host-boladao' > /etc/hostname
+vim /etc/nsswitch
 ```
 
 pacman -S wicd
