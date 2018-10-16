@@ -91,7 +91,7 @@ groupadd idv
 useradd -m -g idv -G users,wheel,storage,power,network -s /bin/bash -c "Ihor Dvoretskyi" idv
 passwd idv
 
-== Install boot loader ==
+** Install boot loader **
 
 pacman -S grub-bios
 grub-install --target=i386-pc --recheck /dev/sda
